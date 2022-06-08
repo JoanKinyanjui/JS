@@ -1,19 +1,25 @@
-import React from 'react'
+import React from 'react';
+import './Topbar.css';
+import {FaSearch} from 'react-icons/fa';
+import {FaUser} from 'react-icons/fa'
+import {FaWeightHanging} from 'react-icons/fa'
 
 function Topbar() {
   return (
-    <div>
-        <form>
-            <input name='search' placeholder='search.....'  />
-        </form>
-
-        <h3><i>Js</i></h3>
+    <div className='Topbar'>
+      <div className='Topbar-center'>
+ 
+  <h3 className='js-name'><i>J s</i></h3>
         
-        <ul>
-            <li>account</li>
-            <li>basket</li>
+        <ul className='ul'>
+            <li><FaUser /></li>
+            <li><FaWeightHanging /></li>
         </ul>
-
+        <form className='form-search'>
+          <FaSearch />
+            <input className='Topbar-search' name='search' placeholder='...'/>
+        </form>
+        </div>
     </div>
   )
 }

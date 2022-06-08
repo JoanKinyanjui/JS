@@ -1,0 +1,10 @@
+.CarouselComponent{
+    width: 100vw;
+    height: max-content;
+    font-family: System;
+    font-size: medium;
+}
+.d-block{
+width: 60vw;
+height: 80vh;
+}

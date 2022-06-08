@@ -1,0 +1,24 @@
+.ImageAndCaptions{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+.ImageAndCaptions-container{
+    display: flex;
+    margin: 1rem;
+}
+.Actual-Image{
+    width: 40vw;
+    height: 40vh;
+}
+.Caption{
+    text-align: center;
+    font-family: System;
+    font-size: medium;
+    margin: auto;
+}
+

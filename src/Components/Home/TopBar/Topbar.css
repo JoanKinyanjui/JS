@@ -1,0 +1,34 @@
+.Topbar{
+    display: flex;
+    height: 15vh;
+    text-align: center;
+}
+.Topbar-center{
+    padding-top: 2rem;
+}
+.form-search{
+    margin-top: 20%;
+}
+.ul{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+.ul li{
+    margin: 6px;
+}
+.Topbar-search{
+    outline: none;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top: none ;
+    border-left: none;
+    border-radius: 3px;
+}
+.js-name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    position: absolute;
+    right: 50%;
+}

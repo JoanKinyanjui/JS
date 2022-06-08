@@ -1,0 +1,25 @@
+.total-area{
+    width: 100vw;
+    height: 15vh;
+    /* background-color: sandybrown; */
+    color: black;
+}
+.Nav{
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+    margin: auto;
+    padding-top: 1rem;
+}
+.nav-items{
+    list-style-type: none;
+    display: flex;
+    margin: auto;
+    padding-top: 2%;
+    font-size: small;
+    text-decoration: none;
+}
+.nav-items li{
+    margin: auto;
+    margin-left: 20px;
+}
