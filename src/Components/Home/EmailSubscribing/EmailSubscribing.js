@@ -5,6 +5,9 @@ import './EmailSubscribing.css';
 function EmailSubscribing() {
   return (
     <div className='EmailSubscribing'>
+
+
+      
       <h5>LATEST FROM -JS</h5>
       <p>Sign-up to receive 10% off your next purchase. Plus hear about new arrivals and offers.</p>
 
@@ -14,7 +17,9 @@ function EmailSubscribing() {
           <button className='Submit'>Submit</button>
         </form>
       </div>
+     
     </div>
+
   )
 }
 

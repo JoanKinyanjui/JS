@@ -1,7 +1,8 @@
 .Topbar{
     display: flex;
-    height: 15vh;
+    height: 17vh;
     text-align: center;
+    padding-bottom: 7rem;
 }
 .Topbar-center{
     padding-top: 2rem;
@@ -14,14 +15,15 @@
     display: flex;
     position: absolute;
     right: 0;
+    color: black;
 }
 .ul li{
     margin: 6px;
 }
 .Topbar-search{
     outline: none;
-    border-bottom: 1px solid grey;
-    border-right: 1px solid grey;
+    border-bottom: none;
+    border-right: none;
     border-top: none ;
     border-left: none;
     border-radius: 3px;
@@ -31,4 +33,5 @@
     font-size: 3rem;
     position: absolute;
     right: 50%;
+    
 }

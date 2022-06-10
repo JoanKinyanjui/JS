@@ -10,7 +10,7 @@ function Testimonials() {
       <div className='Services-display'>
 <div className='display' >
    
-    <h4>"Amazing piece of History"</h4>
+    <h5>"Amazing piece of History"</h5>
     <p>A good review includes enough detail to give others a feel for what happened. Explain which factors contributed
 </p>
 <img className='testimony-img' src='/images/testimony.jpg'/>
@@ -18,7 +18,7 @@ function Testimonials() {
 
 <div className='display' >
     
-    <h4>"Stunning Design"</h4>
+    <h5>"Stunning Design"</h5>
     <p>A good review includes enough detail to give others a feel for what happened. Explain which factors contributed
 </p>
 <img className='testimony-img' src='/images/testimony.jpg'/>
@@ -27,7 +27,7 @@ function Testimonials() {
 
 <div className='display' >
 
-    <h4>"Best Piece"</h4>
+    <h5>"Best Piece"</h5>
     <p>A good review includes enough detail to give others a feel for what happened. Explain which factors contributed</p>
     <img className='testimony-img' src='/images/testimony.jpg'/>
 </div>

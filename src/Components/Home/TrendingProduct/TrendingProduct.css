@@ -8,6 +8,10 @@
     padding-bottom: 5px;
   
 }
+.trending{
+    color: sandybrown;
+}
+
 .TrendingProduct{
     width: 100vw;
     height: max-content;

@@ -23,9 +23,10 @@
     height: 10vh;
     border-radius: 100%;
 }
-.display h4{
+.display h5{
 font-style: italic;
 font-size: medium;
+color: sandybrown;
 }
 .display p{
     font-size: small;

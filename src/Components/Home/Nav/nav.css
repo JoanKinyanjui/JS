@@ -1,12 +1,13 @@
 .total-area{
     width: 100vw;
-    height: 15vh;
-    /* background-color: sandybrown; */
+    height: 10vh;
+     background-color: sandybrown; 
     color: black;
+    padding-bottom: 0rem;
 }
 .Nav{
     width: 100vw;
-    height: 20vh;
+    height: 13vh;
     text-align: center;
     margin: auto;
     padding-top: 1rem;
@@ -15,11 +16,15 @@
     list-style-type: none;
     display: flex;
     margin: auto;
-    padding-top: 2%;
+    padding-top: 0%;
     font-size: small;
+    text-decoration: none;
+}
+.nav-item{
+    color: black;
     text-decoration: none;
 }
 .nav-items li{
     margin: auto;
-    margin-left: 20px;
+    margin-left: 40px;
 }

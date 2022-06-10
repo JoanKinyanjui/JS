@@ -5,7 +5,7 @@ import './CarouselComponent.css';
 function CarouselComponent() {
   return (
     <div className='CarouselComponent'>
-        <Carousel style={{width:'100vw', height:'80vh',margin:'auto',textAlign:'center'}}>
+        <Carousel style={{width:'100vw', height:'90vh',margin:'auto',textAlign:'center'}}>
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -20,7 +20,7 @@ function CarouselComponent() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="/images/jewelley2.jpg"
+      src="/images/jewellery8.jpg"
       alt="Second slide"
     />
 

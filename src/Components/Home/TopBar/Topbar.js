@@ -1,7 +1,8 @@
 import React from 'react';
 import './Topbar.css';
 import {FaSearch} from 'react-icons/fa';
-import {FaUser} from 'react-icons/fa'
+import {FaUser} from 'react-icons/fa';
+import {FaHeart} from 'react-icons/fa'
 import {FaWeightHanging} from 'react-icons/fa'
 
 function Topbar() {
@@ -13,11 +14,13 @@ function Topbar() {
         
         <ul className='ul'>
             <li><FaUser /></li>
+            <li><FaHeart /></li>
             <li><FaWeightHanging /></li>
+            
         </ul>
         <form className='form-search'>
-          <FaSearch />
-            <input className='Topbar-search' name='search' placeholder='...'/>
+          <FaSearch style={{color:'black'}} />
+            <input className='Topbar-search' name='search' placeholder='search....'/>
         </form>
         </div>
     </div>
