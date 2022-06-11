@@ -11,7 +11,7 @@ function TrendingProduct() {
   <p>Pretty necklace</p>
   <p>Ksh 400</p>
   </div>
-<div className='Trending-Image-div'><img className='Trending-Image' src='/images/jewellery3.jpg'/>
+<div className='Trending-Image-div'><img className='Trending-Image' src='/images/jewellery20.jpg'/>
 <p>pretty earings</p>
 <p>Ksh 400</p>
 </div>

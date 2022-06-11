@@ -15,7 +15,7 @@ function Nav() {
                     {navItems.map((item,id)=>{
                         return(
             
-                  <li key={item.id} ><a className={item.cName} >{item.title}</a><FaAngleDown style={{color:'black'}} /></li> 
+                  <li key={item.id} ><Link className={item.cName} to={item.path} >{item.title}</Link></li> 
              
                           
                         )

@@ -8,29 +8,32 @@ function ImageAndCaptions() {
 
 <Container className='ImageAndCaptions-container'>
 
-  <img className='Actual-Image' src='/images/jewellery1.jpg'/>
+  <img className='Actual-Image' src='/images/face1.jpg'/>
   <div className='Caption'>
-    dfghjkl;lkjhgfdfghjdjh,bkvm,cm ,nxbcnxncnm,xnxb<br/>
-    bdgsfdkjhsgjdlskjhhjkljc
+  Brighten up your look with vibrant gemstone jewelry.
+  <br/><br />
+  <button className='Submit'>Shop Now</button>
   </div>
 
 </Container>
 <Container className='ImageAndCaptions-container'>
   <div className='Caption'>
-    dfghjkl;lkjhgfdfghjdjh,bkvm,cm ,nxbcnxncnm,xnxb<br/>
-    bdgsfdkjhsgjdlskjhhjkljc
+  Brighten up your look with vibrant gemstone jewelry.
+  <br/><br />
+  <button className='Submit'>Shop Now</button>
   </div>
 
-  <img className='Actual-Image' src='/images/jewellery1.jpg'/>
+  <img className='Actual-Image' src='/images/jewellery19.jpg'/>
 
 </Container>
 <Container className='ImageAndCaptions-container'>
 
-<img className='Actual-Image' src='/images/jewellery1.jpg'/>
+<img className='Actual-Image' src='/images/jewellery22.jpg'/>
 
-  <div className='Caption'>
-    dfghjkl;lkjhgfdfghjdjh,bkvm,cm ,nxbcnxncnm,xnxb<br/>
-    bdgsfdkjhsgjdlskjhhjkljc
+<div className='Caption'>
+  Brighten up your look with vibrant gemstone jewelry.
+  <br/><br />
+  <button className='Submit'>Shop Now</button>
   </div>
 
 </Container>

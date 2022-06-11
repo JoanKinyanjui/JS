@@ -1,9 +1,10 @@
 .total-area{
     width: 100vw;
     height: 10vh;
-     background-color: sandybrown; 
-    color: black;
     padding-bottom: 0rem;
+    cursor: pointer;
+    background-color: rgb(251, 233, 206);
+    /* background-color: rgb(252, 165, 35); */
 }
 .Nav{
     width: 100vw;
@@ -23,6 +24,9 @@
 .nav-item{
     color: black;
     text-decoration: none;
+}.nav-item:hover{
+    color: sandybrown;
+    font-style: italic;
 }
 .nav-items li{
     margin: auto;

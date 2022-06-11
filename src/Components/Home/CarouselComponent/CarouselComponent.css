@@ -3,8 +3,10 @@
     height: max-content;
     font-family: System;
     font-size: medium;
+    color: sandybrown;
 }
 .d-block{
-width: 60vw;
+width: 100vw;
 height: 90vh;
+margin: auto;
 }

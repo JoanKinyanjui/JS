@@ -8,8 +8,8 @@ function CarouselComponent() {
         <Carousel style={{width:'100vw', height:'90vh',margin:'auto',textAlign:'center'}}>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src="/images/jewelley2.jpg"
+      className="d-block w-90"
+      src="/images/dear8.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -19,8 +19,8 @@ function CarouselComponent() {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src="/images/jewellery8.jpg"
+      className="d-block w-90"
+      src="/images/dear5.jpg"
       alt="Second slide"
     />
 
@@ -31,8 +31,8 @@ function CarouselComponent() {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
-      src='/images/jewelley2.jpg'
+      className="d-block w-90"
+      src='/images/dear3.jpg'
       alt="Third slide"
     />
 
