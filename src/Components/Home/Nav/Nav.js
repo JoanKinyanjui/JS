@@ -2,7 +2,8 @@ import React from 'react'
 import { navItems } from '../Nav/navitems';
 import {Link} from 'react-router-dom';
 import {Navbar} from 'react-bootstrap';
-import {FaAngleDown} from 'react-icons/fa';
+// import {FaAngleDown} from 'react-icons/fa';
+
  import './nav.css';
 
 function Nav() {

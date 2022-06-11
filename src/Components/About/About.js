@@ -15,8 +15,9 @@ function About() {
   return (
     <div>
    <div className='AboutMain-main'>
-   <TopbarAbout />
-       <Aboutnav />
+   {/* <TopbarAbout /> */}
+        {/* <Aboutnav />  */}
+        <Nav />
 <AboutMain />
    </div>
    <Topjewellers />

@@ -7,7 +7,7 @@ export const navItems =[
     },
 
     {
-     title:'ABOUT US',
+     title:'ABOUT',
      path:'/about',
      cName:'nav-item',
      id:2

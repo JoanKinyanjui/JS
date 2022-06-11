@@ -1,15 +1,15 @@
 .Jumbotronbar{
-    color:  sandybrown;
+    color: black;
     width: 100vw;
     height: 8vh;
- 
+    background-color:  rgb(246, 214, 185);
 
 
 }
 .Jumbotronbar ul{
     display: flex;
     padding-top: 1rem;
-    font-size: smaller;
+    font-size: x-small;
     list-style-type: none;
 }
 .Jumbotronbar ul li{

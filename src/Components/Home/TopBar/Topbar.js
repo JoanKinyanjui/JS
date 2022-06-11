@@ -10,7 +10,7 @@ function Topbar() {
     <div className='Topbar'>
       <div className='Topbar-center'>
  
-  <h3 className='js-name'><i>J s</i></h3>
+  <h3 className='js-name'><i>Js</i></h3>
         
         <ul className='ul'>
             <li><FaUser /></li>
@@ -19,7 +19,7 @@ function Topbar() {
             
         </ul>
         <form className='form-search'>
-          <FaSearch style={{color:'black'}} />
+          <FaSearch style={{color:'sandybrown'}} />
             <input className='Topbar-search' name='search' placeholder='search....'/>
         </form>
         </div>

@@ -1,13 +1,13 @@
 .Blog{
     width: 100vw;
-    height: 90vh;
+    height: 83vh;
     position: relative;
 }
 .first-image{
     width: 100vw;
     height: 80vh;
     position: relative;
-    background-image:  url('/public/images/unsplashbook.jpg');
+    background-image:  url('/public/images/jewellery3.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,6 +26,7 @@
 .second-title{
     position: absolute;
     bottom: 0;
+    background-color: rgb(246, 214, 185);
     height: 5rem;
     width: 100vw;
     text-align: center;
@@ -34,11 +35,12 @@
     display: flex;
     list-style-type: none;
     color: black;
-    line-height: 5rem;
+    line-height: 0rem;
 }
 .second-title ul li{
     margin: auto;
-    color: sandybrown;
+    color: rgb(193, 120, 57);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .first-title p{
     color: rgb(249, 236, 217);

@@ -6,7 +6,7 @@ import {FaWeightHanging} from 'react-icons/fa'
 
 function TopbarAbout() {
   return (
-    <div className='Topbar-about'>
+    <div className='Topbar-about1'>
       <div className='Topbar-center-about'>
  
         

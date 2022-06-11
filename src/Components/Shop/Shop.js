@@ -1,8 +1,13 @@
 import React from 'react'
+import Nav from '../Home/Nav/Nav'
 
 function Shop() {
   return (
-    <div>Shop</div>
+    <div>
+      <Nav />
+
+      Lets put things into the cart
+    </div>
   )
 }
 

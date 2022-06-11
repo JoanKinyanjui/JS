@@ -15,7 +15,7 @@ import {FaAngleDown} from 'react-icons/fa';
                 {aboutNavItems.map((item,id)=>{
                     return(
         
-             <Link  key={item.id} to={item.path}><li ><a className={item.cName} >{item.title}</a></li> </Link> 
+                        <li key={item.id} ><Link className={item.cName} to={item.path} >{item.title}</Link></li> 
          
                       
                     )
