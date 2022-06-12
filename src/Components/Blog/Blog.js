@@ -1,10 +1,7 @@
-import React from 'react'
-import Aboutnav from '../About/Aboutnav/Aboutnav';
+import React from 'react';
 import TopbarAbout from '../About/Topbar-about/TopbarAbout';
 import Nav from '../Home/Nav/Nav';
-import Topbar from '../Home/TopBar/Topbar';
 import './Blog.css';
-import BlogContent from './BlogContent';
 
 
 

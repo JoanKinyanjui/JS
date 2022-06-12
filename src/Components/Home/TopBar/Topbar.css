@@ -21,6 +21,11 @@
     margin: 6px;
     color: sandybrown;
 }
+.specific{
+    text-decoration: none;
+    margin: 6px;
+    color: sandybrown;
+}
 .Topbar-search{
     outline: none;
     border-bottom: none;

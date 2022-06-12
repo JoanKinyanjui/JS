@@ -1,13 +1,18 @@
-import React from 'react'
+import React from 'react';
 import Nav from '../Home/Nav/Nav'
+import Topbar from '../Home/TopBar/Topbar';
+import Categories from './Categories/Categories';
+
 
 function Shop() {
   return (
-    <div>
-      <Nav />
+    
+    <>
+  <Topbar />
+  <Nav />
+  <Categories />
+ </>
 
-      Lets put things into the cart
-    </div>
   )
 }
 

@@ -4,6 +4,7 @@ import {FaSearch} from 'react-icons/fa';
 import {FaUser} from 'react-icons/fa';
 import {FaHeart} from 'react-icons/fa'
 import {FaWeightHanging} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 function Topbar() {
   return (
@@ -14,8 +15,10 @@ function Topbar() {
         
         <ul className='ul'>
             <li><FaUser /></li>
-            <li><FaHeart /></li>
-            <li><FaWeightHanging /></li>
+            <li><Link to='/likes' className='specific'><FaHeart /></Link></li>
+            <li><Link to='/cart' className='specific'><FaWeightHanging /></Link></li>
+            
+         
             
         </ul>
         <form className='form-search'>

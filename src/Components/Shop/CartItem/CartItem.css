@@ -1,0 +1,16 @@
+.cart{
+    text-align: right;
+}
+.cart a{
+    margin-left: 12px;
+}
+.remove{
+    width: 100%;
+    margin-top:5px ;
+    border-radius: 3px;
+    background-color: rgb(250, 234, 209);
+}
+.CartItem{
+    margin: auto;
+    margin-top: 1rem;
+}
