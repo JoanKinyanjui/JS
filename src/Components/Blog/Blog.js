@@ -10,14 +10,11 @@ function Blog() {
     <div className='Blog'>
 
         <div className='first-image'>
-{/* <img className='first-actual-image' src='/Images/unsplash2.jpg' /> */}
 </div>
 
 <div className='first-title'>
-<TopbarAbout />
   <Nav />
  
-<hr/>
 </div>
 
 

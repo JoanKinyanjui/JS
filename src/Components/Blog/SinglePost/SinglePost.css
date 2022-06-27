@@ -5,8 +5,8 @@
 .SinglePostnav{
     margin-top: -1rem;
     padding-top: 1rem;
-    background-color: black;
-    color: gray;
+    background-color: rgb(250, 228, 195);
+    color: sandybrown;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -38,7 +38,7 @@
     margin: 10px; 
 }
 .edit{
-    color: gray;
+    color: sandybrown;
     font-size: smaller;
 }
 .delete{

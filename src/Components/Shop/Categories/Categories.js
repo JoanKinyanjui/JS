@@ -3,18 +3,14 @@ import ShopLayout from '../ShopLayout/ShopLayout';
 import './Categories.css'
 import CardObject from '../CardObject/CardObject';
 
-function Categories() {
+function Categories({addToCart,changeStyle,style,products}) {
   return (<>
   <ShopLayout />
     <div className='Categories'>
-<CardObject />
-<CardObject />
-<CardObject />
-<CardObject />
-<CardObject />
+<CardObject products={products} addToCart={addToCart} changeStyle={changeStyle} style={style} />
   </div>
   </>
   )
 }
 
-export default Categories
+export default Categories;

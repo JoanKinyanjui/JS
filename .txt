@@ -1,0 +1,26 @@
+ //Mpesa Daraja APi
+ const request =require('request');
+
+router.get('/access_token',(req,res)=>{
+   // access token
+//    let url="https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
+//    let auth= new Buffer.from('IKRUNKmfQuzPLxgj2x2al0sdGvlJcJ8Z:7XPZZfvaMdHbtwa2','utf8').toString('base64');
+
+//     request(
+//         {
+//         url: url,
+//         headers:{
+//             "Authorization" : "Basic" + auth
+//         }
+//         },
+//         (error,response,body)=>{
+//             if(error){
+//                 console.log(error)
+//             }
+//             else{
+//                 res.status(200).json(body)
+//             }
+//         }
+//     )
+
+// })

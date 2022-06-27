@@ -17,10 +17,6 @@
     right: 0;
     color: black;
 }
-.ul li{
-    margin: 6px;
-    color: sandybrown;
-}
 .specific{
     text-decoration: none;
     margin: 6px;
@@ -42,4 +38,19 @@
     color: sandybrown;
     right: 50%;
     
+}
+@media only screen and (max-width: 800px){
+    .specific{
+        margin: 3px;
+    }
+    .js-name{
+   font-size: 3rem;
+        
+    }
+}
+@media only screen and (max-width: 500px){
+    .js-name{
+   font-size: 2rem;
+        
+    }
 }

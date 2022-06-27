@@ -2,7 +2,14 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/first',(req,res)=>{
-    res.send('Heey my first router')
+    const data={
+        username:"Joan",
+        age:23,
+        career:"developer"
+    }
+    res.json(data)
 })
+
+
 
 module.exports = router;

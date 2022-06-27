@@ -9,6 +9,8 @@
     margin-top:5px ;
     border-radius: 3px;
     background-color: rgb(250, 234, 209);
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 .CartItem{
     margin: auto;

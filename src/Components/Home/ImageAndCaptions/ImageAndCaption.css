@@ -9,11 +9,12 @@
 }
 .ImageAndCaptions-container{
     display: flex;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .Actual-Image{
-    width: 30vw;
-    height: 50vh;
+    width: 35vw;
+    height: 40vh;
 }
 .Caption{
     text-align: center;
@@ -21,4 +22,3 @@
     font-size: medium;
     margin: auto;
 }
-

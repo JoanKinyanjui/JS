@@ -4,10 +4,11 @@
     margin: auto;
     margin-top: 3rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 .CardTotal{
     margin: auto;
-    margin-left:1rem ;
 }
 .checkout{
     padding-top: 5px;
@@ -15,7 +16,7 @@
     width: 100%;
     margin-top:5px ;
     border-radius: 3px;
-    background-color: sandybrown;
+    background-color: rgb(251, 183, 124);
     margin-top: 2rem;
 }
 .back{
@@ -23,4 +24,8 @@
     border: none;
     border-radius: 2px;
     color: sandybrown;
+}
+.specific-total{
+    text-decoration: none;
+    color: black;
 }

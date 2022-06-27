@@ -8,10 +8,9 @@ import Topbar from './Topbar/Topbar';
 function BlogContent() {
   return (<>
     <div className='Blog-content'>
-       <a to='/Single'>  <div className='Container1'>
+       <Link to='/Single'>  <div className='Container1'>
               <Posts />           
-              <Posts />
-        </div></a>
+        </div></Link>
 <div className='BlogContent Container2'>
 <Container2 />
 </div>

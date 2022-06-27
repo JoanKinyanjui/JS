@@ -10,3 +10,9 @@ width: 100vw;
 height: 90vh;
 margin: auto;
 }
+@media only screen and(max-width:700px) {
+  
+    .csS{
+    height: 70vh;
+    }
+}

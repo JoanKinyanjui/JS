@@ -5,7 +5,7 @@ function SinglePost() {
   return (<>
  
     <div className='SinglePostWrapper'>
-        <img className='SinglePostImg' src='/Images/wallpaper1.jpg'/>
+        <img className='SinglePostImg' src='/images/face5.jpg'/>
         <div className='SinglePostnav'>
             <div className='divTitle'>
             <span className='Title'>Being in a Group of Friends</span>

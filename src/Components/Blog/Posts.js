@@ -4,18 +4,17 @@ import './Posts.css';
 function Post() {
   return (
     <div className='Post'>
-        <img className='post-img' src='/Images/unsplash3.jpg' />
+        <img className='post-img' src='/Images/jewellery9.jpg' />
         <div className='post-info'>
             <div className='postCats'>
-                <span className='postCat' > jewellery</span>
+                <span className='postCat' > Life</span>
                 <span className='postCat' >Style</span>
             </div>
-<span className='postTitle'> Accessory</span>
+<span className='postTitle'> Being In A Group of Friends</span>
 <span className='postDate'> 8 days ago</span>
         </div>
         <p className='postDesc'>
-          I am looking foward to posting my first blogPost about my friends who have turned to family
-
+        One thing no one told me is that being in a group of friends requires the same commitment.....
 
       
           

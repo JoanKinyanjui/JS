@@ -5,11 +5,11 @@ import './CarouselComponent.css';
 function CarouselComponent() {
   return (
     <div className='CarouselComponent'>
-        <Carousel style={{width:'100vw', height:'90vh',margin:'auto',textAlign:'center'}}>
+        <Carousel className='csS' style={{width:'100vw', height:'90vh',margin:'auto',textAlign:'center'}}>
   <Carousel.Item>
     <img
       className="d-block w-90"
-      src="/images/dear8.jpg"
+      src="/images/dear3.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -20,7 +20,7 @@ function CarouselComponent() {
   <Carousel.Item>
     <img
       className="d-block w-90"
-      src="/images/dear5.jpg"
+      src="/images/dear8.jpg"
       alt="Second slide"
     />
 
@@ -32,7 +32,7 @@ function CarouselComponent() {
   <Carousel.Item>
     <img
       className="d-block w-90"
-      src='/images/dear3.jpg'
+      src='/images/good.jpg'
       alt="Third slide"
     />
 

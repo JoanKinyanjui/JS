@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartItem from '../Shop/CartItem/CartItem'
+import { UserContext } from '../UserContext'
 import CarouselComponent from './CarouselComponent/CarouselComponent'
 import EmailSubscribing from './EmailSubscribing/EmailSubscribing'
 import Footer from './Footer/Footer'
@@ -13,9 +15,10 @@ import TrendingProduct from './TrendingProduct/TrendingProduct'
 
 
 function Home() {
+  const{cartItem}=useContext(UserContext)
   return (
     <div>
-      <Topbar />
+      <Topbar cartItem={cartItem} />
       <Nav />
       <Jumbotronbar />
       <CarouselComponent />

@@ -53,14 +53,18 @@
     padding: 0.2px 3px;
     border-radius: 1px;
     margin: auto;
-    width: 50%;
+    width: 60%;
     font-size: x-small;
-    margin-top: 25%;
+    margin-top: 50%;
 }
-.sub-produvt p{
-margin-top: 1rem;
-font-size: small;
-}
-@media only screen and(max-width:1200px){
 
+.sub-produvt p{
+margin: auto;
+font-size: x-small;
+}
+@media screen and(min-width:900px){
+    .sub-produvt{
+        margin-top: 25%;
+        width: 50%;
+    }
 }

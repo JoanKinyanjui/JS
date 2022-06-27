@@ -32,13 +32,15 @@
 .shop-ul{
     list-style-type: none;
     font-family: System;
-    font-size:medium;
+    font-size: small;
     color: black;
     display: flex;
     flex-wrap: wrap;
 }
 .shop-ul li{
     margin: auto;
+    text-transform: capitalize;
+    
 }
 @media only screen and (max-width:1200px){
     .shop-ul{
@@ -47,7 +49,6 @@
         list-style-type: none;
         text-align: center;
     }
-    
     .Works{
         padding:0px;
         margin-top: 1rem;
