@@ -8,14 +8,13 @@ import {useContext} from 'react';
 
 
 function Shop() {
-  const{cartItem}=useContext(UserContext)
- const {addToCart,changeStyle,style,products}= useContext(UserContext)
+ const {changeStyle,style,products,cartItems,onAdd}= useContext(UserContext)
   return (
     
     <>
-  <Topbar cartItem={cartItem}/>
+  <Topbar cartItemsNo={cartItems.length}/>
   <Nav />
-  <Categories products={products} addToCart={addToCart} style={style} changeStyle={changeStyle}/>
+  <Categories products={products} onAdd={onAdd} style={style} changeStyle={changeStyle}/>
   <Footer />
  </>
 

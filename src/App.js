@@ -19,20 +19,50 @@ import axios from 'axios';
 
 
 function App() {
+  //Fetching Products
+const [products,setProducts] =useState([]);
+useEffect(() => {
+  axios.get('http://localhost:3000/products')
+  .then(function (response) {
+   setProducts(response.data)
+    // console.log(response.data);
+  })
+},[]);
   //Adding to cart State
-const [cartItem,setCartItem] =useState(0);
+const [cartItems,setCartItems]=useState([]);
 const [style,setStyle]=useState('not-liked');
 const [likedItems,setLikedItems]=useState(0);
-//Cart
-const addToCart=()=>{
-     setCartItem(prev=>prev+1)
+
+//Add CartItem
+const onAdd=(product)=>{
+    const exist = cartItems.find(x => x.id === product.id);
+    if (exist){
+      setCartItems(
+        cartItems.map((x) =>
+        x.id === product.id ? {...exist, qty: exist.qty +1}:x
+        )
+      );
+    }else{
+      setCartItems([...cartItems,{...product, qty:1}])
+    }
 }
-const minusFromCart=()=>{
-  setCartItem(prev=>prev-1)
+//Remove CrtItem
+const onRemove=(product)=>{
+  const exist = cartItems.find((x)=> x.id ===product.id);
+  if (exist.qty ===1){
+    setCartItems(
+    cartItems.filter((x)=> x.id !== product.id)
+    );
+  }else{
+    setCartItems(
+      cartItems.map((x)=>
+      x.id === product.id ? {...exist, qty: exist.qty - 1}:x
+      )
+      
+    );
+  }
 }
-const removeCart=()=>{
-  setCartItem(0)
-}
+
 //Likes
 const likedItem=()=>{
   setLikedItems(prev=>prev+1)
@@ -41,23 +71,14 @@ const changeStyle=()=>{
   setStyle('liked')
 }
 
-const [products,setProducts] =useState([]);
 
-//Fetching Products
-useEffect(() => {
-  axios.get('http://localhost:3000/products')
-  .then(function (response) {
-   setProducts(response.data)
-    console.log(response.data);
-  })
-},[]);
 
 
   return (
     <>
      <Router>
 <div className='App'>
-<UserContext.Provider value={{cartItem,addToCart,changeStyle,style,minusFromCart,removeCart,products,likedItems}}>
+<UserContext.Provider value={{onRemove,cartItems,onAdd,changeStyle,style,products,likedItems}}>
   <Routes>
    
 

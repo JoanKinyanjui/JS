@@ -3,11 +3,11 @@ import ShopLayout from '../ShopLayout/ShopLayout';
 import './Categories.css'
 import CardObject from '../CardObject/CardObject';
 
-function Categories({addToCart,changeStyle,style,products}) {
+function Categories({changeStyle,style,products,onAdd}) {
   return (<>
   <ShopLayout />
     <div className='Categories'>
-<CardObject products={products} addToCart={addToCart} changeStyle={changeStyle} style={style} />
+<CardObject products={products} onAdd={onAdd} changeStyle={changeStyle} style={style} />
   </div>
   </>
   )

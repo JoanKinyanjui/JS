@@ -72,7 +72,8 @@ app.use('/paymentsbympesa',(req,res)=>{
         console.log(data); // it will print your collection data
     });
     })
-    
+
+//Post new user  
 app.post('/register',async (req,res)=>{
     console.log(req.body)
     try{

@@ -11,6 +11,11 @@
     border: none;
     background-color: transparent;
 }
+.cart-sub:hover{
+    color: rgb(29, 28, 28);
+    font-size: medium;
+}
+
 .not-liked{
     color: black;
     margin-right: 15px;

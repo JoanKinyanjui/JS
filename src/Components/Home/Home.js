@@ -15,10 +15,10 @@ import TrendingProduct from './TrendingProduct/TrendingProduct'
 
 
 function Home() {
-  const{cartItem}=useContext(UserContext)
+  const{cartItems}=useContext(UserContext)
   return (
     <div>
-      <Topbar cartItem={cartItem} />
+      <Topbar cartItemsNo={cartItems.lenghth} />
       <Nav />
       <Jumbotronbar />
       <CarouselComponent />

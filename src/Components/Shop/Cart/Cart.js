@@ -4,15 +4,19 @@ import Nav from '../../Home/Nav/Nav';
 import Topbar from '../../Home/TopBar/Topbar';
 import CartItem from '../CartItem/CartItem';
 import Total from '../Total/Total';
+import { Card, Icon, Image } from 'semantic-ui-react'
+import { FaAd, FaMinus, FaPlus } from 'react-icons/fa';
 import './Cart.css';
 import {useContext} from 'react';
 import { UserContext } from '../../UserContext';
+import { imageListItemBarClasses } from '@mui/material';
 
 
 function Cart() {
-  const{addToCart,cartItem,minusFromCart,removeCart}=useContext(UserContext)
-  console.log(cartItem)
-  if(cartItem<1){
+  const{cartItems,onRemove,onAdd,addToCart,cartItem,minusFromCart,removeCart}=useContext(UserContext);
+  console.log(cartItems)
+
+  if(cartItems === 0){
     return(
       <>
       <div className='stick'> <br/>
@@ -20,14 +24,13 @@ function Cart() {
      <div className='Cart-big'>
     
       <h5 style={{color:'sandybrown',fontFamily:'System'}}>YOUR CART!!</h5>
-      <Total amount='0.00'/>
       <hr />
-      <i>The cart Is Empty</i>
+      <i>The cart Is Empty!!!</i>
       </div>
       </>
     )
   }else{
-   
+
     return (
       <>
       <div className='stick'> <br/>
@@ -35,12 +38,37 @@ function Cart() {
      <div className='Cart-big'>
     
       <h5 style={{color:'sandybrown',fontFamily:'System'}}>YOUR CART!!</h5>
-      <Total />
+      <Total cartItems={cartItems}/>
       <hr />
       <div className='Cart'>
-     
-    <CartItem addToCart={addToCart} minusFromCart={minusFromCart} removeCart={removeCart}/>
-    <CartItem addToCart={addToCart} minusFromCart={minusFromCart} removeCart={removeCart}/>
+     {cartItems.map((item)=>(
+      <div key={item.id} className='CartItem'>
+<Card>
+    <Image  src='/images/jewellery21.jpg' wrapped ui={false} />
+    <Card.Content>
+      <Card.Meta>
+        <span className='date'>Bold Hoops</span>
+      </Card.Meta>
+      <Card.Description >
+        {item.qty} x ksh{item.price}
+      </Card.Description>
+      <Card.Description className='cart' >
+      <a >
+     <button   style={{border:'none',backgroundColor:'transparent',}}  onClick={onAdd}>+</button>
+     <button   style={{border:'none',backgroundColor:'transparent',}}  onClick={onRemove}>-</button>
+      </a>
+      </Card.Description>
+      <Card.Description className='remove'>
+  
+      </Card.Description>
+
+    </Card.Content>
+  </Card>
+ 
+      </div>
+     ))}
+    
+
    
       </div>
       </div>

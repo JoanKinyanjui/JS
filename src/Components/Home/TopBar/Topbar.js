@@ -7,17 +7,17 @@ import {FaWeightHanging} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import {Badge} from '@mui/material'
 
-function Topbar({cartItem}) {
+function Topbar({cartItemsNo}) {
   return (
     <div className='Topbar'>
       <div className='Topbar-center'>
  
-  <h3 className='js-name'><i>Js</i></h3>
+  <h3 className='js-name'><i>JS</i></h3>
         
         <ul className='ul'>
         {/* <li><Link to='/account' className='specific'><FaUser /></Link></li> */}
             <li><Link to='/likes' className='specific'><FaHeart /></Link></li>
-            <li><Link to='/cart' className='specific'><Badge badgeContent={cartItem} color='primary' ><FaWeightHanging /></Badge></Link></li>
+            <li><Link to='/cart' className='specific'><Badge badgeContent={cartItemsNo} color='primary' ><FaWeightHanging /></Badge></Link></li>
         </ul>
         <form className='form-search'>
           <FaSearch style={{color:'sandybrown'}} />
