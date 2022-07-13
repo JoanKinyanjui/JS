@@ -41,13 +41,13 @@ function Cart() {
       <Total cartItems={cartItems}/>
       <hr />
       <div className='Cart'>
-     {cartItems.map((item)=>(
+     {cartItems?.map((item)=>(
       <div key={item.id} className='CartItem'>
 <Card>
-    <Image  src='/images/jewellery21.jpg' wrapped ui={false} />
+    <Image  src={item.thumbnail} wrapped ui={false} />
     <Card.Content>
       <Card.Meta>
-        <span className='date'>Bold Hoops</span>
+        <span className='date'>{item.name}</span>
       </Card.Meta>
       <Card.Description >
         {item.qty} x ksh{item.price}

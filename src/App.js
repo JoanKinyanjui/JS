@@ -38,7 +38,7 @@ const onAdd=(product)=>{
     const exist = cartItems.find(x => x.id === product.id);
     if (exist){
       setCartItems(
-        cartItems.map((x) =>
+        cartItems?.map((x) =>
         x.id === product.id ? {...exist, qty: exist.qty +1}:x
         )
       );

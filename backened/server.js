@@ -7,12 +7,13 @@ const port = process.env.PORT || 3000;
 const app = express();
 const mongoose = require('mongoose');
 const User = require('./models/user.model')
+// var build = require('./build')
 
-var routes = require('./routes');
 
 app.use(cors());
 app.use(express.json());
 app.use(morgan('tiny'));
+// app.use(express.static(path.join(__dirname, build)));
 
 
 //DATABASE
@@ -100,7 +101,11 @@ if(user){
         res.json({status: 'ok'})
 
 })
-app.use('/first',routes)    
+//M-PESA INTEGRATION
+const mpesaRouter = require('./routes/mpesa');
+
+app.use(mpesaRouter)
+
    
 
 app.listen(port,()=>{

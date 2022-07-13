@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eff556df.css",
+    "main.js": "/static/js/main.946d6388.js",
+    "static/js/787.a1e91ac1.chunk.js": "/static/js/787.a1e91ac1.chunk.js",
+    "static/media/shop1.jpg": "/static/media/shop1.2fde959eac509b979ae7.jpg",
+    "static/media/unsplash1.jpg": "/static/media/unsplash1.3cfc010619040cca7411.jpg",
+    "static/media/jewellery3.jpg": "/static/media/jewellery3.a643dfb01fd1e1b4732b.jpg",
+    "static/media/jewellery26.png": "/static/media/jewellery26.42b4a3c180fafb13ebb0.png",
+    "static/media/jewellery24.png": "/static/media/jewellery24.bc58817e143157783999.png",
+    "static/media/jewellery25.png": "/static/media/jewellery25.29689ea0ffe7e71411bd.png",
+    "static/media/jewellery18.jpg": "/static/media/jewellery18.529181e6bce61f3429bc.jpg",
+    "index.html": "/index.html",
+    "main.eff556df.css.map": "/static/css/main.eff556df.css.map",
+    "main.946d6388.js.map": "/static/js/main.946d6388.js.map",
+    "787.a1e91ac1.chunk.js.map": "/static/js/787.a1e91ac1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eff556df.css",
+    "static/js/main.946d6388.js"
+  ]
+}
