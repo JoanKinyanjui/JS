@@ -11,3 +11,11 @@
     height: 10vh;
     text-align: right;
 }
+.cartItem{
+    margin: auto;
+}
+.cartDiv{
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+}

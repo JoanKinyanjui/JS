@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import CartItem from '../Shop/CartItem/CartItem'
 import { UserContext } from '../UserContext'
 import CarouselComponent from './CarouselComponent/CarouselComponent'
 import EmailSubscribing from './EmailSubscribing/EmailSubscribing'
@@ -15,10 +14,10 @@ import TrendingProduct from './TrendingProduct/TrendingProduct'
 
 
 function Home() {
-  const{cartItems}=useContext(UserContext)
+
   return (
     <div>
-      <Topbar cartItemsNo={cartItems.lenghth} />
+      <Topbar   />
       <Nav />
       <Jumbotronbar />
       <CarouselComponent />

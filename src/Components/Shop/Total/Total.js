@@ -2,11 +2,13 @@ import React from 'react';
 import './Total.css';
 import { Card } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
-function Total({cartItems}) {
-  const itemPrice = cartItems.reduce((a,c)=>a + c.price *c.qty, 0);
-  const taxPrice =itemPrice *0.14;
-  const totalPrice =itemPrice + taxPrice;
+function Total() {
+  const { total } = useSelector((store) => store.cart);
+  const taxPrice =total *0.14;
+  const totalPrice =total + taxPrice;
+  
   return (
     <div className='Total'> 
        <Card className='CardTotal'>
@@ -15,7 +17,7 @@ function Total({cartItems}) {
         <span className='date'>CART SUMMARY</span>
       </Card.Meta>
       <Card.Description >
-        Items Price : {itemPrice.toFixed(2)}<br/>
+        Items Price : {total.toFixed(2)}<br/>
         Tax Price : {taxPrice.toFixed(2)}<br />
         <b>SubTotal</b>: Ksh {totalPrice.toFixed(2)}<br />
          </Card.Description>

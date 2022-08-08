@@ -25,4 +25,4 @@ function Post() {
 }
 
 export default Post;
-<img />
+
