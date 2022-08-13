@@ -14,7 +14,7 @@ let build = 'build';
 app.use(cors({origin: true, credentials: true}));
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, '..',build)));
-
+console.log(path.join(__dirname, '..',build))
 
 //CONNECTING TO THE DATABASE...
 client.connect(function(err) {
