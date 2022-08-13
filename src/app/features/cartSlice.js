@@ -1,10 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit';
 import cartItems from './cartItems';
+import orders from './orders';
 
 const initialState ={
-    cartItems:cartItems,
-    amount:0,
-    total: 0,
+    cartItems: cartItems,
+    orders: orders,
+    quantity:0,
+    total:0,
     isLoading:true,
 }
 console.log(cartItems)
@@ -13,6 +15,17 @@ const cartSlice =createSlice({
     name:'cart',
     initialState,
     reducers:{
+        addToCart:(state,action)=>{
+            const itemIndex = state.cartItems.findIndex(
+                item=>item.id===action.payload.id
+                );
+                if(itemIndex >=0){
+                    state.cartItems[itemIndex].carQuantity +=1
+                }else{
+                    const tempProduct ={...action.payload, carQuantity:1};
+                    state.cartItems.push(tempProduct)
+                }
+        },
         clearCart : (state)=>{
             state.cartItems=[]
         },
@@ -22,25 +35,29 @@ const cartSlice =createSlice({
         },
         increase: (state,{payload})=>{
             const cartItem = state.cartItems.find((item)=>item.id === payload.id);
-            cartItem.amount =cartItem.amount+1
+            cartItem.quantity =cartItem.quantity +1
         },
         decrease: (state,{payload})=>{
             const cartItem = state.cartItems.find((item)=>item.id === payload.id);
-            cartItem.amount =cartItem.amount - 1
+            cartItem.quantity =cartItem.quantity- 1
         },
         calculateTotals:(state)=>{
-            let amount =0;
+            let quantity =0;
             let total =0;
             state.cartItems.forEach((item)=>{
-                amount += item.amount;
-                total += item.amount*item.price;
+                quantity += item.quantity;
+                total += item.quantity*item.price;
             });
-            state.amount =amount;
+            state.quantity = quantity;
             state.total =total;
+        },
+        pushOrders:(state)=>{
+           state.orders=[...cartItems]
+           console.log(orders)
         }
     }
 
 })
 
 export default cartSlice.reducer;
-export const { clearCart,increase,decrease,removeItem,calculateTotals } =cartSlice.actions
+export const { addToCart,clearCart,increase,decrease,removeItem,calculateTotals,pushOrders } =cartSlice.actions

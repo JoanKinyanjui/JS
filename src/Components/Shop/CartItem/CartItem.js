@@ -6,16 +6,16 @@ import { FaAd, FaMinus, FaPlus } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import {increase,decrease,removeItem} from '../../../app/features/cartSlice';
 
-function CartItem({title,price,amount,img, id}) {
+function CartItem({name,price,quantity,image, id}) {
   const dispatch = useDispatch();
   return (
     <div className='CartItem'>
 
 <Card>
-    <Image  src={img} wrapped ui={false} />
+    <Image  src={image} wrapped ui={false} />
     <Card.Content>
       <Card.Meta>
-        <span className='date'>{title}</span>
+        <span className='date'>{name}</span>
       </Card.Meta>
       <Card.Description >
         ksh {price}
@@ -23,9 +23,9 @@ function CartItem({title,price,amount,img, id}) {
       <Card.Description className='cart' >
       
       <Button style={{color:'sandybrown'}} onClick={()=>{dispatch(increase({id}))}}>+</Button >
-    {amount}
+    {quantity}
     <Button style={{color:'sandybrown'}}    onClick={()=>{
-        if(amount===1){
+        if(quantity===1){
             dispatch(removeItem(id))
             return;
         }

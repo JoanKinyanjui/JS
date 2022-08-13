@@ -3,9 +3,14 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 import './CardObject.css';
 import {FaHeart} from 'react-icons/fa';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../app/features/cartSlice';
+import { Button } from 'react-bootstrap';
+
 
 function CardObject() {
   const [products,setProducts]=useState([]);
+  const dispatch =useDispatch();
 
   //FETCHING DATA
   useEffect(()=>{
@@ -16,6 +21,11 @@ function CardObject() {
     
     .catch(err=>console.log(err))
   },[])
+  const handleAddToCartt =(product)=>{
+  dispatch(addToCart(product))
+  console.log(product)
+  }
+
 return (
     <div className='CardObject'> 
 {products.map((product)=>(
@@ -31,7 +41,7 @@ return (
           <Card.Description className='cart' >
           <a >
            <button  className='cart-sub' ><FaHeart /></button>
-           <button  className='cart-sub' > <Icon  name='cart' /></button>
+           <button  className='cart-sub' onClick={()=>handleAddToCartt(product)}> <Icon  name='cart' /></button>
             
           </a>
           </Card.Description>

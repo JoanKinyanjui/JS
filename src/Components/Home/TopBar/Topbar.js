@@ -10,8 +10,8 @@ import {useSelector} from 'react-redux';
 
 
 function Topbar( ) {
-  const { amount } = useSelector((store) => store.cart);
-  console.log(amount)
+  const { quantity } = useSelector((store) => store.cart);
+  console.log(quantity)
 
   return (
     <div className='Topbar'>
@@ -22,7 +22,7 @@ function Topbar( ) {
         <ul className='ul'>
         {/* <li><Link to='/account' className='specific'><FaUser /></Link></li> */}
             <li><Link to='/likes' className='specific'><FaHeart /></Link></li>
-            <li><Link to='/cart' className='specific'><Badge  badgeContent={amount} color='primary' ><FaWeightHanging /></Badge></Link></li>
+            <li><Link to='/cart' className='specific'><Badge  badgeContent={quantity} color='primary' ><FaWeightHanging /></Badge></Link></li>
         </ul>
         <form className='form-search'>
           <FaSearch style={{color:'sandybrown'}} />

@@ -24,3 +24,36 @@ router.get('/access_token',(req,res)=>{
 //     )
 
 // })
+
+
+import axios from 'axios';
+
+// const postPayment =()=>{
+//     var bodyFormData = new FormData();
+//     bodyFormData.append('phoneNo', phoneNo);
+//     bodyFormData.append('amount', amount);
+//     console.log(amount,phoneNo)
+        
+//             axios({
+//                 method: "post",
+//                 url: "http://localhost:3000/stk",
+//                 data: bodyFormData,
+//                 headers: { "Content-Type": "multipart/form-data" },
+//               })
+//                 .then(function (response) {
+//                   //handle success
+//                   console.log(response);
+//                 })
+//                 .catch(function (response) {
+//                   //handle error
+//                   console.log(response);
+//                 });
+              
+//     }
+
+//const onHandlePayment=async(e)=>{
+  //       e.preventDefault();
+  //       postPayment();
+  //       setPhoneNo('');
+  //       setAmount('');
+  // }

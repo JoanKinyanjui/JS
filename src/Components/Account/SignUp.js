@@ -6,23 +6,23 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import './LoginSignup.css';
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
+  const navigate = useNavigate();
   const [email,setEmail]=useState('')
-  const[password,setPassword]=useState('')
-  const[confirmPassword,setConfirmPassword]=useState('')
+  const[password,setPassword]=useState('');
+
 
   async function registerUser(e){
      e.preventDefault()
      setEmail('')
      setPassword('')
-     setConfirmPassword('')
-
+     navigate('/Home')
      const response =await fetch('http://localhost:3000/register',{
       method:'POST',
       headers:{
@@ -67,14 +67,7 @@ function SignUp() {
           <Form.Control type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} value={password}/>
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-        <Form.Label column sm={2}>
-          Confirm Password
-        </Form.Label>
-        <Col sm={6}>
-          <Form.Control type="password" placeholder="Confirm assword" onChange={(e)=>setConfirmPassword(e.target.value)} value={confirmPassword}/>
-        </Col>
-      </Form.Group>
+
       <fieldset>
        
       </fieldset>

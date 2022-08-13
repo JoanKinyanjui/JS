@@ -1,13 +1,19 @@
-import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-export const apiSlice = createApi({
-    reducerPath: 'apiSlice',
-    baseQuery :fetchBaseQuery({baseUrl:'http://localhost:3000'}),
-    endpoints:(builder)=>({
-        getProducts : builder.query({
-            query:()=>'/products',
-        })
-    })
-})
 
-export const {useGetProductsQuery}= apiSlice;
+
+export const usersApi = createApi({
+    reducerPath: 'usersApi',
+    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000'}),
+    endpoints: (builder) => ({
+      AddUsers: builder.mutation({
+      query: users=>({
+       url :'/payment',
+       method:'POST',
+       body: users,
+      })
+      }),
+    }),
+  })
+  
+  export const { useAddUsersMutation } = usersApi;

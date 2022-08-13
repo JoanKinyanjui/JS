@@ -4,13 +4,14 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import './LoginSignup.css';
-
+import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
   const [email,setEmail]=useState('')
   const[password,setPassword]=useState('')
   
@@ -18,6 +19,7 @@ function Login() {
      e.preventDefault()
      setEmail('')
      setPassword('')
+     navigate('/home')
 
      const response =await fetch('http://localhost:3000/login',{
       method:'POST',
@@ -38,7 +40,7 @@ function Login() {
         <Container>
           <Navbar.Brand href="#home" className='js-name'>JS</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home"><Link  className='nav-item' to='/login'>Sign U p</Link></Nav.Link>
+            <Nav.Link href="#home"><Link  className='nav-item' to='/'>Sign Up</Link></Nav.Link>
             
             
           </Nav>

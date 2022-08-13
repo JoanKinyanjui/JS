@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
@@ -31,24 +31,21 @@ useEffect(() => {
 <div className='App'>
 
   <Routes>
-   
-    <Route exact path='/'  element={<Home />}/>
+    <Route exact path='/'  element={<Account />}/>
 
-   
-    <Route exact path='/account'  element={<Account />}/>
-    
+
     <Route exact path='/login'  element={<Login />}/>
+
+
+    <Route exact path='/home'  element={<Home />}/>
+   
+
+
     <Route exact path='/signup'  element={<SignUp />}/>
 
 
     <Route exact path='/about'  element={<About />}/>
-    
-    
-    <Route exact path='/blog'  element={<BlogLayout />}/>
-    <Route exact path='/Single'  element={<Single />}/>
    
-
-         
 
    <Route exact path='/shop'  element={<Shop />}/> 
 
@@ -67,6 +64,11 @@ useEffect(() => {
 
 
    <Route exact path='/checkoutSummary'  element={<CheckoutSummary />}/>
+
+      
+    
+    <Route exact path='/blog'  element={<BlogLayout />}/>
+    <Route exact path='/Single'  element={<Single />}/> 
    
   </Routes>
 
