@@ -7,13 +7,13 @@ const client = require('./connection.js');
 const app = express();
 const axios =require('axios');
 const request = require('request');
-const secretKey = process.env.SECRET_KEY;
-const consumerKey = process.env.CONSUMER_KEY;
+let build = 'build';
 
 
   
 app.use(cors({origin: true, credentials: true}));
 app.use(express.urlencoded({extended: true}))
+app.use(express.static(path.join(__dirname, '..',build)));
 
 
 //CONNECTING TO THE DATABASE...
