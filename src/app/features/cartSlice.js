@@ -9,7 +9,6 @@ const initialState ={
     total:0,
     isLoading:true,
 }
-console.log(cartItems)
 
 const cartSlice =createSlice({
     name:'cart',
@@ -50,9 +49,9 @@ const cartSlice =createSlice({
             });
             state.quantity = quantity;
             state.total =total;
-        },
-        pushOrders:(state)=>{
-           state.orders=[...cartItems]
+        },      
+         pushOrders:(state)=>{
+           state.orders.push(...cartItems)
            console.log(orders)
         }
     }

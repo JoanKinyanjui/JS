@@ -1,7 +1,7 @@
 export const navItems =[
     {
     title:'HOME',
-    path:'/home',
+    path:'/Home',
     cName:'nav-item',
     id:1
     },

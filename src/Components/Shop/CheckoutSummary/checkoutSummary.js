@@ -4,7 +4,6 @@ import {Button} from  '@mui/material';
 import { Card } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import axios from 'axios';
 
 
 function CheckoutSummary() {
@@ -14,39 +13,28 @@ function CheckoutSummary() {
     const roundedTotal = totalPrice.toFixed(0)
 
 //HANDLING INPUT ...
-const[phone,setPhone]= useState('0790236990');
-const[amount,setAmount]= useState(`${roundedTotal}`);
+const[phoneNo,setPhoneNo]= useState('0790236990');
+const[amount,setAmount]= useState(``);
 
-const onHandlePayment=async(e)=>{
+async function onHandlePayment(e){
         e.preventDefault();
-        postPayment();
-        setPhone('');
+        setPhoneNo('');
         setAmount('');
+
+        const response =await fetch('http://localhost:3000/stk',{
+         method:'POST',
+         headers:{
+           'Content-Type':'application/json'
+         },
+         body:JSON.stringify({
+           phoneNo,
+           amount
+         }),
+        })
   }
 
 
-const postPayment =()=>{
-        var bodyFormData = new FormData();
-        bodyFormData.append('phone', {phone});
-        bodyFormData.append('amount', {amount});
-        console.log(amount,phone)
-            
-                axios({
-                    method: "post",
-                    url: "http://localhost:3000/stk",
-                    data: bodyFormData,
-                    headers: { "Content-Type": "multipart/form-data" },
-                  })
-                    .then(function (response) {
-                      //handle success
-                      console.log(response);
-                    })
-                    .catch(function (response) {
-                      //handle error
-                      console.log(response);
-                    });
-                  
-        }
+  
 
 
 
@@ -59,10 +47,10 @@ const postPayment =()=>{
         <Card.Text style={{fontFamily:'System' , fontSize:'12px'}}>
           PAY VIA MPESA <br /><br />
           <form onSubmit={onHandlePayment}>
-            <input placeholder='07...' name='phone' type='tel'  value={phone}  onChange={(e)=>setPhone(e.target.value)}/>
+            <input placeholder='07...' name='phone' type='tel' id='phoneNo' value={phoneNo}  onChange={(e)=>setPhoneNo(e.target.value)}/>
             <br />
             <br/>
-            <input readOnly   placeholder='amount...' type='number' name='integer' value={roundedTotal}  />
+           <input    placeholder='amount...' type='number' name='integer' value={amount} onChange={(e)=>setAmount(e.target.value)}/>
             <br /><br />
             <input  type='submit' className='checkoutButton' value='Confirm Payment'/>
                      </form>

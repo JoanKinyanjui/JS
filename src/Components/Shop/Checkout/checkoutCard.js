@@ -1,6 +1,6 @@
+import React,{useState} from 'react';
 import { Card } from 'react-bootstrap';
 import './Checkout.css';
-import React from 'react';
 import {Button} from  '@mui/material';
 import { FaLocationArrow } from 'react-icons/fa';
 import {useSelector} from 'react-redux';
@@ -20,6 +20,7 @@ function CheckoutCard() {
   const handleOrder=()=>{
   dispatch(pushOrders())
   }
+
   return (
     <div className='checkoutCard'>
     <Card className='CheckoutCard'>

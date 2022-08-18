@@ -6,15 +6,15 @@ const port = process.env.PORT || 3000;
 const client = require('./connection.js');
 const app = express();
 const axios =require('axios');
+var bodyParser = require('body-parser');
 const request = require('request');
 let build = 'build';
 
-
-  
+//MIDDLEWARES...
 app.use(cors({origin: true, credentials: true}));
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, '..',build)));
-console.log(path.join(__dirname, '..',build))
+app.use(bodyParser.json())
 
 //CONNECTING TO THE DATABASE...
 client.connect(function(err) {
@@ -22,20 +22,26 @@ client.connect(function(err) {
     console.log("Connected! to Postgres Subtle Statements database");
   });
 
+//LOGIN USERS
+app.get('/login',(req,res)=>{
+  const{email,password} = req.body;
+
+});
+
 //REGISTERING NEW USERS
 app.post('/register',(req,res)=>{
-    const user = req.body;
-    let insertQuery = `insert into client(email, password) 
-                       values('${user.email}', '${user.password}')`
+  const user = req.body
+  let insertQuery = `insert into users(name, email, password) 
+                     values('${user.name}', '${user.email}', '${user.password}')`
 
-    client.query(insertQuery, (err, result)=>{
-        if(!err){
-            console.log('New user added');
-        }
-        else{ console.log(err.message) }
-    })
-    client.end;
-})
+  client.query(insertQuery, (err, result)=>{
+      if(!err){
+         console.log('Insertion was successful')
+      }
+      else{ console.log(err.message) }
+  })
+  client.end;
+});
 
 //FETCHING PRODUCTS FROM DATABASE...
 app.get('/products', (req, res)=>{
@@ -72,9 +78,8 @@ const generateToken = async (req,res,next) => {
 
 //M-PESA INTEGRATION...
 app.post('/stk', generateToken, async(req,res)=>{
-
-    const phoneNo =720335710;
-    const amount = 1;
+    const phoneNo=req.body.phoneNo.substring(1)
+    const amount = req.body.amount
 
     const date = new Date();
     const timestamp = date.getFullYear()+
@@ -114,7 +119,6 @@ app.post('/stk', generateToken, async(req,res)=>{
         console.log(err.message)
         res.status(400).json(err.message)
      })
-    // res.json({phoneNo,amount})
 });
 
 
