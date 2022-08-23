@@ -4,6 +4,8 @@ const path = require('path');
 const express = require('express');
 const port = process.env.PORT || 3000;
 const client = require('./connection.js');
+const DB_URL = 'postgres://localhost:5432/subtle-statements'
+
 const app = express();
 const axios =require('axios');
 var bodyParser = require('body-parser');
