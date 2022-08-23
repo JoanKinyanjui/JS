@@ -45,7 +45,7 @@ function Cart() {
         ))}
    
     </div>
-    <button style={{backgroundColor:'navajowhite' ,marginTop:'1rem',border:'none'}} onClick={()=>{
+    <button style={{backgroundColor:'navajowhite' ,marginTop:'1rem',marginLeft:'25%',borderRadius:'5%',border:'none'}} onClick={()=>{
             dispatch(clearCart())}}>
                 Empty Cart
             </button>

@@ -8,13 +8,32 @@ const app = express();
 const axios =require('axios');
 var bodyParser = require('body-parser');
 const request = require('request');
+const session =require('express-session');
+const flash = require('express-flash');
+const bcrypt =require('bcrypt');
+const passport = require('passport');
+const initializePassport = require('./passportConfig');
+initializePassport(passport)
+
+
 let build = 'build';
+
 
 //MIDDLEWARES...
 app.use(cors({origin: true, credentials: true}));
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, '..',build)));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(
+    session({
+        secret:"secret",
+        resave:false,
+        saveUninitialized:false
+    })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 //CONNECTING TO THE DATABASE...
 client.connect(function(err) {
@@ -22,15 +41,10 @@ client.connect(function(err) {
     console.log("Connected! to Postgres Subtle Statements database");
   });
 
-//LOGIN USERS
-app.get('/login',(req,res)=>{
-  const{email,password} = req.body;
-
-});
-
-//REGISTERING NEW USERS
-app.post('/register',(req,res)=>{
-  const user = req.body
+//REGISTERING NEW USERS...
+app.post('/register',async (req,res)=>{
+  const user = req.body;
+//   const hashedPassword = await bcrypt.hash(req.body.password,10);
   let insertQuery = `insert into users(name, email, password) 
                      values('${user.name}', '${user.email}', '${user.password}')`
 
@@ -42,6 +56,15 @@ app.post('/register',(req,res)=>{
   })
   client.end;
 });
+//LOGIN USERS...
+//has o be fixed the code is not working....
+app.post('/login',passport.authenticate("local",{
+    successRedirect:'/home',
+    failureRedirect:'/login',
+    failureFlash: true
+})
+);
+
 
 //FETCHING PRODUCTS FROM DATABASE...
 app.get('/products', (req, res)=>{
@@ -124,4 +147,4 @@ app.post('/stk', generateToken, async(req,res)=>{
 
 app.listen(port,()=>{
     console.log(`Server Running on ${port}...`)
-})
+});

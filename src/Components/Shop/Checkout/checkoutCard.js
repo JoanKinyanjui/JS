@@ -5,39 +5,67 @@ import {Button} from  '@mui/material';
 import { FaLocationArrow } from 'react-icons/fa';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
-import { pushOrders } from '../../../app/features/cartSlice';
-import { useDispatch } from 'react-redux';
+import CheckoutSummary from '../CheckoutSummary/checkoutSummary';
+// import { pushOrders } from '../../../app/features/cartSlice';
+// import { useDispatch } from 'react-redux';
 
 function CheckoutCard() {
-  const dispatch =useDispatch();
+  // const dispatch =useDispatch();
   const { total ,cartItems} = useSelector((store) => store.cart);
   const taxPrice =total *0.14;
   const totalPrice =total + taxPrice;
   const roundedTotal = totalPrice.toFixed(0)
 
+  
+  const[phoneNo,setPhoneNo]= useState('');
+  const amount= 1;
+  
+  async function onHandlePayment(e){
+          e.preventDefault();
+          setPhoneNo('');
+  const usersItems =[];
+  const orders = usersItems.concat(cartItems,{'amount':amount,'phoneNo':phoneNo});
+  console.log(orders)
+  //post payment amount and number...
+          const response =await fetch('http://localhost:3000/stk',{
+           method:'POST',
+           headers:{
+             'Content-Type':'application/json'
+           },
+           body:JSON.stringify({
+             phoneNo,
+             amount
+           }),
+          })
+    }
+  
 
-
-  const handleOrder=()=>{
-  dispatch(pushOrders())
-  }
 
   return (
     <div className='checkoutCard'>
     <Card className='CheckoutCard'>
       <Card.Body>
-        <Card.Title>PickUp  location <FaLocationArrow style={{fontSize:'12px' }} /> </Card.Title>
+        <Card.Title>PICKUP LOCATION <FaLocationArrow style={{fontSize:'12px' }} /> </Card.Title>
         <Card.Text style={{fontFamily:'System' , fontSize:'12px'}}>
           Pick Up Go Shop <br />
           Along Moi Avenue <br />
           Opposite Bazzarre
         </Card.Text>
-        <p>Ksh {roundedTotal}</p>
- <Link style={{textDecoration:'none'}} to='/checkoutSummary'>  
-   <Button  style={{ fontSize:'15px',color:'sandybrown' ,textShadow:'1px 1px 1px navajowhite'}} onClick={()=>handleOrder()}>Confirm Order</Button>
-</Link>
+        <Card.Title>TOTAL : Ksh {totalPrice.toFixed(0)}</Card.Title>
+        <Card.Text style={{fontFamily:'System' , fontSize:'12px'}}>
+          PAY VIA MPESA <br /><br />
+          <form onSubmit={onHandlePayment}>
+            <input placeholder='07...' name='phone' type='tel' id='phoneNo' value={phoneNo}  onChange={(e)=>setPhoneNo(e.target.value)}/>
+            <br />
+            <br/>
+           <input  readOnly  placeholder='amount...' type='number' name='integer' value={amount} />
+            <br /><br />
+            <input  type='submit' className='checkoutButton' value='Confirm Payment'/>
+                     </form>
+        </Card.Text>
+
       </Card.Body>
     </Card>
-
     </div>
   )
 }

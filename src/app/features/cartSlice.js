@@ -1,10 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
 import cartItems from './cartItems';
-import orders from './orders';
 
 const initialState ={
     cartItems: cartItems,
-    orders: orders,
     quantity:0,
     total:0,
     isLoading:true,
@@ -49,10 +47,6 @@ const cartSlice =createSlice({
             });
             state.quantity = quantity;
             state.total =total;
-        },      
-         pushOrders:(state)=>{
-           state.orders.push(...cartItems)
-           console.log(orders)
         }
     }
 

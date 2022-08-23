@@ -31,8 +31,7 @@ function Login() {
         password
       }),
      })
-     const data =await response.json()
-     console.log(data)
+     console.log(email,password)
   }
   return (
     <>
@@ -53,7 +52,7 @@ function Login() {
           Email
         </Form.Label>
         <Col sm={6}>
-          <Form.Control type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}  value={email}/>
+          <Form.Control type="email" id='email' placeholder="Email" onChange={(e)=>setEmail(e.target.value)}  value={email} required/>
         </Col>
       </Form.Group>
 
@@ -62,7 +61,7 @@ function Login() {
           Password
         </Form.Label>
         <Col sm={6}>
-          <Form.Control type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} value={password}/>
+          <Form.Control type="password" id='password'  placeholder=" confirm password" onChange={(e)=>setPassword(e.target.value)} value={password} required/>
         </Col>
       </Form.Group>
    
