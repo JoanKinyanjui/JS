@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import CheckoutSummary from '../CheckoutSummary/checkoutSummary';
 import { clearCart } from '../../../app/features/cartSlice';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function CheckoutCard() {
   const dispatch =useDispatch();
@@ -18,7 +18,7 @@ function CheckoutCard() {
 
   
   const[phoneNo,setPhoneNo]= useState('');
-  const amount= 1;
+  const amount= roundedTotal;
   
   async function onHandlePayment(e){
           e.preventDefault();
